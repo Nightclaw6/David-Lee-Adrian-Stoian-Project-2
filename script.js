@@ -45,16 +45,18 @@ movieApp.displayMovies = (dataFromApi) => {
         // Create img element
         const image = document.createElement('img');
         // Add src and alt attributes to our image
-        const paragraph = document.createElement('p');
+        const description = document.createElement('p');
         console.log(imageObject);
         image.src = movieApp.imageUrl + imageObject.poster_path;
         // Append the image to its parents li.
         listElement.appendChild(image);
-        listElement.appendChild(paragraph);
-        paragraph.textContent = imageObject.overview;
+        listElement.appendChild(description);
+        description.textContent = imageObject.overview;
         // Append the list item into the gallery ul
         ul.appendChild(listElement);
-        
+        const rating = document.createElement('p');
+        listElement.appendChild(rating);
+        rating.textContent = imageObject.vote_average + ' / 10';
     });
 };
 
