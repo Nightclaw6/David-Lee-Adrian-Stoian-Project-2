@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["partials/_header.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,UAAA;ACCF","file":"styles.css"}
+=======
+{"version":3,"sources":["partials/_header.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,sCAAA;ACCF","file":"styles.css"}
+>>>>>>> 319f0d0f96c1e62505e6555ce522570d3a52a056
