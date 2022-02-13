@@ -45,12 +45,16 @@ movieApp.displayMovies = (dataFromApi) => {
         // Create img element
         const image = document.createElement('img');
         // Add src and alt attributes to our image
+        const paragraph = document.createElement('p');
         console.log(imageObject);
         image.src = movieApp.imageUrl + imageObject.poster_path;
         // Append the image to its parents li.
         listElement.appendChild(image);
+        listElement.appendChild(paragraph);
+        paragraph.textContent = imageObject.overview;
         // Append the list item into the gallery ul
         ul.appendChild(listElement);
+        
     });
 };
 
