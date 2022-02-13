@@ -1,3 +1,9 @@
-.movie h1 {
+body {
+  font-family: "Quintessential", cursive;
+  background-color: red;
+}
+
+header h1 {
+  font-family: "Quintessential", cursive;
   color: red;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
