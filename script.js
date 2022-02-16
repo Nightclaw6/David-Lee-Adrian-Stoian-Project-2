@@ -12,8 +12,8 @@ movieApp.init = () => {
     movieApp.searchFunction();
 }
 
-movieApp.getMovies = (userChoice) => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=fdc64670b61843a5841c94be98a6df3b&query=${userChoice}`)
+movieApp.getMovies = (asd) => {
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=fdc64670b61843a5841c94be98a6df3b&query=${asd}`)
         .then((response)=>{
             return response.json();
         })
@@ -25,14 +25,14 @@ movieApp.getMovies = (userChoice) => {
 
 
 
-
+// movieApp.searchFunction = function(){
     const searchButton = document.querySelector('button')
 
     searchButton.addEventListener('click', function(){
         console.log(searchTerm.value)
         movieApp.getMovies(searchTerm.value)
     })
-
+// }
 
 
 movieApp.displayMovies = (dataFromApi) => {
