@@ -25,36 +25,40 @@ movieApp.getMovies = (asd) => {
 
 
 
-// movieApp.searchFunction = function(){
+movieApp.searchFunction = function(){
     const searchButton = document.querySelector('button')
 
     searchButton.addEventListener('click', function(){
         console.log(searchTerm.value)
         movieApp.getMovies(searchTerm.value)
     })
-// }
+}
 
 
 movieApp.displayMovies = (dataFromApi) => {
-    const ul = document.querySelector('.movieList');
-    ul.innerHTML = "";
+    const details = document.querySelector('.textContainer');
+    details.innerHTML = "";
+    
     console.log(dataFromApi)
+    
     dataFromApi.results.forEach((imageObject) => {
-        const listElement = document.createElement('li');
-        const image = document.createElement('img');
+        const poster = document.querySelector('.imgContainer');
+
+        const moviePoster = document.createElement('img');
+        moviePoster.src = movieApp.imageUrl + imageObject.poster_path;
+        details.appendChild(moviePoster);
+        
+        const name = document.createElement('p');
+        name.textContent = imageObject.title;
+        details.appendChild(name);
+
         const description = document.createElement('p');
-
-        console.log(imageObject);
-
-        image.src = movieApp.imageUrl + imageObject.poster_path;
-        listElement.appendChild(image);
-        listElement.appendChild(description);
-
         description.textContent = imageObject.overview;
-        ul.appendChild(listElement);
+        details.appendChild(description);
+
         const rating = document.createElement('p');
-        listElement.appendChild(rating);
         rating.textContent = imageObject.vote_average + ' / 10';
+        details.appendChild(rating);
     });
 };
 
