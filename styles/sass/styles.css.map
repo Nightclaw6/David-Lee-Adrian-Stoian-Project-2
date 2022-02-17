@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sources":["partials/_header.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,sCAAA;ACCF","file":"styles.css"}
-=======
-<<<<<<< HEAD
-{"version":3,"sources":["partials/_header.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,UAAA;ACCF","file":"styles.css"}
-=======
-{"version":3,"sources":["partials/_header.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,sCAAA;ACCF","file":"styles.css"}
->>>>>>> 319f0d0f96c1e62505e6555ce522570d3a52a056
->>>>>>> f3e17d4f737fc46c7c2581ccef8bfd2e65cb260c
+{"version":3,"sources":["partials/_content.scss","styles.scss"],"names":[],"mappings":"AAAA;EACE,2BAAA;ACCF;;ADEA;EACE,aAAA;EACA,eAAA;EACA,6BAAA;EACA,2BAAA;ACCF;;ADEA;EACE,UAAA;EACA,mBAAA;EACA,8BAAA;ACCF;;ADEA;EACE,uBAAA;EACA,eAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;ACCF;;ADEA;EACE,eAAA;ACCF;;ADEA;EACE,0BAAA;EACA,mBAAA;EACA,kBAAA;ACCF;;ADEA;EACE,eAAA;ACCF;;ADEA;EACE,eAAA;ACCF;;ADEA;EACE,YAAA;EACA,mBAAA;ACCF;;ADEA;EACE,YAAA;ACCF","file":"styles.css"}

@@ -37,28 +37,33 @@ movieApp.searchFunction = function(){
 
 movieApp.displayMovies = (dataFromApi) => {
     const details = document.querySelector('.textContainer');
+        
     details.innerHTML = "";
     
     console.log(dataFromApi)
     
     dataFromApi.results.forEach((imageObject) => {
-        const poster = document.querySelector('.imgContainer');
-
+        
         const moviePoster = document.createElement('img');
         moviePoster.src = movieApp.imageUrl + imageObject.poster_path;
         details.appendChild(moviePoster);
+        moviePoster.classList.add('imageBox');
         
-        const name = document.createElement('p');
+        const movieDetails = document.createElement('div');
+        details.appendChild(movieDetails);
+        movieDetails.classList.add('textBox');
+        
+        const name = document.createElement('h3');
         name.textContent = imageObject.title;
-        details.appendChild(name);
+        movieDetails.appendChild(name);
 
         const description = document.createElement('p');
         description.textContent = imageObject.overview;
-        details.appendChild(description);
+        movieDetails.appendChild(description);
 
         const rating = document.createElement('p');
         rating.textContent = imageObject.vote_average + ' / 10';
-        details.appendChild(rating);
+        movieDetails.appendChild(rating);
     });
 };
 
