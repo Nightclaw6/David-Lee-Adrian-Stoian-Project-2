@@ -8,16 +8,26 @@ movieApp.imageUrl = `https://image.tmdb.org/t/p/w500`;
 movieApp.search = `https://api.themoviedb.org/3/search/movie?api_key=fdc64670b61843a5841c94be98a6df3b&query=${searchTerm}`;
 movieApp.searchURL = movieApp.baseUrl + '/search/movie?api_key=' + movieApp.apiKey;
 
-
+// movieApp.getMovies('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=fdc64670b61843a5841c94be98a6df3b');
 
 movieApp.init = () => {
-    
+    movieApp.getPopularMovies();
     movieApp.searchFunction();
     
 }
 
 movieApp.getMovies = (url) => {
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=fdc64670b61843a5841c94be98a6df3b&query=${url}`)
+        .then((response)=>{
+            return response.json();
+        })
+        .then((jsonResponse)=>{
+            movieApp.displayMovies(jsonResponse);
+        })
+};
+
+movieApp.getPopularMovies = () => {
+    fetch(movieApp.mainUrl)
         .then((response)=>{
             return response.json();
         })
@@ -41,7 +51,7 @@ movieApp.searchFunction = function(){
 
 
 movieApp.displayMovies = (dataFromApi) => {
-    const details = document.querySelector('.textContainer');
+    const details = document.querySelector('.resultsContainer');
         
     details.innerHTML = "";
     

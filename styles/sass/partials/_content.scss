@@ -8,7 +8,7 @@ body {
   width: 90%;
 }
 
-.textContainer {
+.resultsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -27,10 +27,11 @@ body {
   font-size: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   margin-bottom: 20px;
   padding: 20px;
   border-bottom: 5px solid black;
+  align-items: center;
 }
 
 .textBox h3 {
@@ -79,7 +80,7 @@ footer p {
 }
 
 @media screen and (max-width: 1200px) {
-  .textContainer img {
+  .resultsContainer img {
     object-fit: contain;
   }
 }
@@ -89,7 +90,7 @@ footer p {
     width: 100%;
     align-items: center;
   }
-  .textContainer img {
+  .resultsContainer img {
     object-fit: contain;
     width: 50%;
   }
@@ -108,13 +109,13 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-  .textContainer img {
+  .resultsContainer img {
     object-fit: contain;
   }
-  .textContainer h3 {
+  .resultsContainer h3 {
     font-size: 30px;
   }
-  .textContainer p {
+  .resultsContainer p {
     font-size: 20px;
   }
   header h1 {
