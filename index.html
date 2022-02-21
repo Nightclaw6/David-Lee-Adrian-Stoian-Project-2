@@ -15,7 +15,7 @@
     <header>
         <div class="wrapper">
             <h1>The Movie Info Booth</h1>
-            <h2>Type in any movie you would like to know more about.</h2>
+            <h2>Do you want to watch a movie but you are undecided?<br>You are in the right place!</h2>
             <form id="form" action="#">
                 <label for="search-input">Search for a movie</label>
                 <div class="search-bar">
@@ -26,26 +26,28 @@
 
         </div>
     </header>
+    <!-- **************************************************************** -->
+    <!-- The overlay -->
+    
+    <div id="overlayTrailer" class="overlay">
+    
+        <!-- Button to close the overlay navigation -->
+        <a href="#" class="closebtn" onclick="movieApp.closeNav()">&times;</a>
+    
+        <!-- Overlay content -->
+        <div id= "movieDiv" class="overlay-content"></div>
+    </div>
+    <!-- **************************************************************** -->
     <section class="results">
+        <!-- Results will be added here  -->
         <div class="wrapper">
-            <div class="textContainer">
-                
-            </div>
+            <div class="textContainer"></div>
         </div>
         
-        
-        
-        
-        
-        
-        <ul class="movieList">
-            
-        </ul>
-        <!-- results to be added here  -->
     </section>
     <footer>
         <p>&copy; David Lee + Adrian Stoian 2022<br>
-            <a href="https://junocollege.com/">Created at Juno College</a>
+            <a href="https://junocollege.com/">Created at Juno College 2022</a>
         </p>
     </footer>
     <script src="script.js"></script>
