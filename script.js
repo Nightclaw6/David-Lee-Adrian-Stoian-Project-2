@@ -9,8 +9,11 @@ movieApp.search = `https://api.themoviedb.org/3/search/movie?api_key=fdc64670b61
 movieApp.searchURL = movieApp.baseUrl + '/search/movie?api_key=' + movieApp.apiKey;
 
 
+
 movieApp.init = () => {
+    
     movieApp.searchFunction();
+    
 }
 
 movieApp.getMovies = (url) => {
@@ -26,13 +29,14 @@ movieApp.getMovies = (url) => {
 
 
 
+
 movieApp.searchFunction = function(){
     const searchButton = document.querySelector('button')
 
     searchButton.addEventListener('click', function(){
-        // console.log(searchTerm.value)
         movieApp.getMovies(searchTerm.value)
     })
+    
 }
 
 
@@ -73,13 +77,12 @@ movieApp.displayMovies = (dataFromApi) => {
         movieDetails.appendChild(btnTrailer);
 
         btnTrailer.addEventListener('click', () => {
-            // console.log(btnTrailer.id);
+            
             movieApp.openNav(imageObject);
         })
 
     });
 };
-// *************************************************************************
 
 let trailerContent = document.getElementById('movieDiv');
 
@@ -91,7 +94,7 @@ movieApp.openNav = (imageObject) => {
             return res.json();
         })
         .then ( (jsonRes) => {
-            console.log(jsonRes);
+            
             if (jsonRes) {
                 // Open the overlay
                 
@@ -103,7 +106,7 @@ movieApp.openNav = (imageObject) => {
                             let embed = `
                             <iframe width="660" height="415" src="https://www.youtube.com/embed/${item.key}" title="${item.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             `;
-                    console.log(embed);    
+                        
                     trailerContent.innerHTML = embed;    
                         }
                     })

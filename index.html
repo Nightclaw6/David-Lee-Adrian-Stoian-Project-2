@@ -17,9 +17,9 @@
             <h1>The Movie Info Booth</h1>
             <h2>Do you want to watch a movie but you are undecided?<br>You are in the right place!</h2>
             <form id="form" action="#">
-                <label for="search-input">Search for a movie</label>
+                <label for="search-input"></label>
                 <div class="search-bar">
-                    <input type="text" placeholder="" id="search-input">
+                    <input type="text" placeholder="Search for a movie" id="search-input">
                     <button>Search</button>
                 </div>
             </form>
@@ -28,27 +28,35 @@
     </header>
     <!-- **************************************************************** -->
     <!-- The overlay -->
-    
-    <div id="overlayTrailer" class="overlay">
-    
-        <!-- Button to close the overlay navigation -->
-        <a href="#" class="closebtn" onclick="movieApp.closeNav()">&times;</a>
-    
-        <!-- Overlay content -->
-        <div id= "movieDiv" class="overlay-content"></div>
+    <div class="wrapper">
+        <div id="overlayTrailer" class="overlay">
+        
+            <!-- Button to close the overlay navigation -->
+            <a href="#" class="closebtn" onclick="movieApp.closeNav()">&times;</a>
+        
+            <!-- Overlay content -->
+            <div id="movieDiv" class="overlay-content"></div>
+        </div>
     </div>
+    
     <!-- **************************************************************** -->
     <section class="results">
-        <!-- Results will be added here  -->
         <div class="wrapper">
-            <div class="textContainer"></div>
+            <!-- Results will be added here  -->
+            <div class="wrapper">
+                <div class="textContainer"></div>
+            </div>
         </div>
+        
         
     </section>
     <footer>
-        <p>&copy; David Lee + Adrian Stoian 2022<br>
-            <a href="https://junocollege.com/">Created at Juno College 2022</a>
-        </p>
+        <div class="wrapper">
+            <p>&copy; David Lee + Adrian Stoian 2022<br>
+                <a href="https://junocollege.com/">Created at Juno College 2022</a>
+            </p>
+        </div>
+        
     </footer>
     <script src="script.js"></script>
 </body>

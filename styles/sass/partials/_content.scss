@@ -2,6 +2,12 @@ body {
   background-color: black;
 }
 
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 .textContainer {
   display: flex;
   flex-wrap: wrap;
@@ -70,4 +76,73 @@ button,
 footer p {
   text-align: center;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .textContainer img {
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .textBox {
+    width: 100%;
+    align-items: center;
+  }
+  .textContainer img {
+    object-fit: contain;
+    width: 50%;
+  }
+  .search-bar button {
+    margin-bottom: 10px;
+  }
+  .search-bar button {
+    text-align: center;
+  }
+  .watchTrailer {
+    text-align: center;
+  }
+  iframe {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .textContainer img {
+    object-fit: contain;
+  }
+  .textContainer h3 {
+    font-size: 30px;
+  }
+  .textContainer p {
+    font-size: 20px;
+  }
+  header h1 {
+    font-size: 45px;
+  }
+  header h2 {
+    font-size: 25px;
+  }
+  .search-bar button {
+    text-align: center;
+  }
+  #search-input {
+    text-align: center;
+  }
+  .watchTrailer {
+    text-align: center;
+  }
+
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  iframe {
+    width: 100vw;
+  }
 }
